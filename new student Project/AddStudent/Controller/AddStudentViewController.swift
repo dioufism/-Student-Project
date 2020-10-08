@@ -9,9 +9,7 @@ import UIKit
 
 //MARK: -Delegate Protocol
 protocol SendStudentDelegate: class {
-    
     func addStudent( image: UIImage,firstName: String, lName: String, phoneNumber: String, email: String, indexPath: IndexPath? )
-    
 }
 
 class AddStudentViewController: UIViewController {
@@ -33,7 +31,7 @@ class AddStudentViewController: UIViewController {
     var studentData: [StudentData] = []  //Array of type enum
     var studentDelegate: SendStudentDelegate?
     var selectedImage: UIImage? = #imageLiteral(resourceName: "icons8-user_groups")  // always set to have a default image
-    var indexAtRow: IndexPath?
+    var indexAtRow: IndexPath? // pass value to this indexpath
     
 //MARK: - ViewDidLoad()
     override func viewDidLoad() {
@@ -42,22 +40,19 @@ class AddStudentViewController: UIViewController {
         self.addStudenttable.tableFooterView = UIView()
         setupProperties()
         setButton()
-       
-            }
+       }
     //MARK: -HELPER FUNCTION
     func setupProperties() { //order of displaying in the tableView
         studentData.append(.firstName)
         studentData.append(.lastName)
         studentData.append(.phoneNumber)
         studentData.append(.email)
-        
         if let _ = student {
             self.title = "Edit Student"
         } else {
             self.title = "Add Student"
             student = Student()
         }
-        
     }
     private func setupImagePicker(sourceType: UIImagePickerController.SourceType) {
         let imagepicker = UIImagePickerController()
@@ -80,7 +75,6 @@ class AddStudentViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alertController, animated: true)
     }
-    
     //MARK: -Action Buttons
     @IBAction func ProfileImageButtontapped(_ sender: UIButton) {
         let actionSheet: UIAlertController = UIAlertController(title: "set picture", message: nil, preferredStyle: UIAlertController.Style.actionSheet)

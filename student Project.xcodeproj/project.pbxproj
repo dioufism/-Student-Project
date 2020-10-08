@@ -10,6 +10,7 @@
 		DA15E7A5251FAF2700AE24B2 /* AddStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15E7A4251FAF2700AE24B2 /* AddStudentViewController.swift */; };
 		DA15E7A9251FB85A00AE24B2 /* AddStudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15E7A8251FB85A00AE24B2 /* AddStudentTableViewCell.swift */; };
 		DA15E7AE25203F2500AE24B2 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA15E7AD25203F2500AE24B2 /* Validation.swift */; };
+		DA45C231252F75890010B3EE /* tableviewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA45C230252F75890010B3EE /* tableviewExtention.swift */; };
 		DAA8DBA2251F82E00052AF85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA8DBA1251F82E00052AF85 /* AppDelegate.swift */; };
 		DAA8DBA4251F82E00052AF85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA8DBA3251F82E00052AF85 /* SceneDelegate.swift */; };
 		DAA8DBA9251F82E00052AF85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA8DBA7251F82E00052AF85 /* Main.storyboard */; };
@@ -18,13 +19,14 @@
 		DAA8DBB8251F83230052AF85 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA8DBB7251F83230052AF85 /* StudentViewController.swift */; };
 		DAA8DBBB251F84A10052AF85 /* StudentListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA8DBBA251F84A10052AF85 /* StudentListTableViewCell.swift */; };
 		DAA8DBBE251F87300052AF85 /* StudentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA8DBBD251F87300052AF85 /* StudentModel.swift */; };
-		DAD5B7DC2521851F00C4CE62 /* StudentDetailiewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5B7DB2521851F00C4CE62 /* StudentDetailiewController.swift */; };
+		DAD5B7DC2521851F00C4CE62 /* StudentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5B7DB2521851F00C4CE62 /* StudentDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DA15E7A4251FAF2700AE24B2 /* AddStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentViewController.swift; sourceTree = "<group>"; };
 		DA15E7A8251FB85A00AE24B2 /* AddStudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentTableViewCell.swift; sourceTree = "<group>"; };
 		DA15E7AD25203F2500AE24B2 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		DA45C230252F75890010B3EE /* tableviewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableviewExtention.swift; sourceTree = "<group>"; };
 		DAA8DB9E251F82E00052AF85 /* student Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "student Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA8DBA1251F82E00052AF85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA8DBA3251F82E00052AF85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +37,7 @@
 		DAA8DBB7251F83230052AF85 /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
 		DAA8DBBA251F84A10052AF85 /* StudentListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListTableViewCell.swift; sourceTree = "<group>"; };
 		DAA8DBBD251F87300052AF85 /* StudentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentModel.swift; sourceTree = "<group>"; };
-		DAD5B7DB2521851F00C4CE62 /* StudentDetailiewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailiewController.swift; sourceTree = "<group>"; };
+		DAD5B7DB2521851F00C4CE62 /* StudentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				DAA8DBBD251F87300052AF85 /* StudentModel.swift */,
 				DA15E7AD25203F2500AE24B2 /* Validation.swift */,
+				DA45C230252F75890010B3EE /* tableviewExtention.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,7 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				DAA8DBB7251F83230052AF85 /* StudentViewController.swift */,
-				DAD5B7DB2521851F00C4CE62 /* StudentDetailiewController.swift */,
+				DAD5B7DB2521851F00C4CE62 /* StudentDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -231,10 +234,11 @@
 				DA15E7A5251FAF2700AE24B2 /* AddStudentViewController.swift in Sources */,
 				DA15E7A9251FB85A00AE24B2 /* AddStudentTableViewCell.swift in Sources */,
 				DA15E7AE25203F2500AE24B2 /* Validation.swift in Sources */,
+				DA45C231252F75890010B3EE /* tableviewExtention.swift in Sources */,
 				DAA8DBA2251F82E00052AF85 /* AppDelegate.swift in Sources */,
 				DAA8DBA4251F82E00052AF85 /* SceneDelegate.swift in Sources */,
 				DAA8DBBE251F87300052AF85 /* StudentModel.swift in Sources */,
-				DAD5B7DC2521851F00C4CE62 /* StudentDetailiewController.swift in Sources */,
+				DAD5B7DC2521851F00C4CE62 /* StudentDetailViewController.swift in Sources */,
 				DAA8DBBB251F84A10052AF85 /* StudentListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

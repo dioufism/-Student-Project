@@ -79,7 +79,7 @@ extension StudentViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let detailViewController = storyBoard.instantiateViewController(identifier: "toDetailScreen") as StudentDetailiewController
+        let detailViewController = storyBoard.instantiateViewController(identifier: "toDetailScreen") as StudentDetailViewController
         detailViewController.studentObj = dataSource[indexPath.row]
         detailViewController.studentDetailDelegate = self
         //fix edit

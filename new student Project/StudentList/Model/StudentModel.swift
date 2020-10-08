@@ -7,8 +7,8 @@
 
 import Foundation
 import UIKit
+
 class Student {
-    
     var studentImage: UIImage
     var firstName: String
     var lastName: String
@@ -23,7 +23,7 @@ class Student {
         email = ""
     }
         
-    init(image: UIImage, firstName: String, lastName: String, email: String, phoneNumber:String) {// designated init
+    init(image: UIImage, firstName: String, lastName: String, email: String, phoneNumber:String) { //designated init
         self.phoneNumber = phoneNumber
         self.studentImage = image
         self.firstName = firstName

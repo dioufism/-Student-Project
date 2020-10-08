@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StudentDetailiewController: UIViewController {
+class StudentDetailViewController: UIViewController {
 
 //MARK: -Class VAriables
     weak var studentDetailDelegate: SendStudentDelegate?
@@ -48,15 +48,15 @@ class StudentDetailiewController: UIViewController {
 }
 
 
-extension StudentDetailiewController: SendStudentDelegate {
+extension StudentDetailViewController: SendStudentDelegate {
     
     func addStudent(image: UIImage, firstName: String, lName: String, phoneNumber: String, email: String, indexPath: IndexPath?) {
         detailedImage.image = image
         detailedLabel.text = firstName + " " + lName
         detailPhoneNumber.text = phoneNumber
         detailedEmail.text = email
-        studentDetailDelegate?.addStudent(image: image, firstName: firstName, lName: lName, phoneNumber: phoneNumber, email: email, indexPath: nil)
+        studentDetailDelegate?.addStudent(image: image, firstName: firstName, lName: lName, phoneNumber: phoneNumber, email: email, indexPath: detailIndexPath)
     }
     
-    
+    // edit / add should be seperate
 }
