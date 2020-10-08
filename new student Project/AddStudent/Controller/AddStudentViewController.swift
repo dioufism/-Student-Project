@@ -12,10 +12,10 @@ protocol SendStudentDelegate: class {
     func addStudent( image: UIImage,firstName: String, lName: String, phoneNumber: String, email: String, indexPath: IndexPath? )
 }
 
-class AddStudentViewController: UIViewController {
+class AddStudentViewController: UIViewController, UITextFieldDelegate {
     enum StudentData: String { //
         case firstName = "First Name"
-        case lastName = "last Name"
+        case lastName = "Last Name"
         case phoneNumber = "Phone Number"
         case email = "Email"
     }
@@ -38,6 +38,7 @@ class AddStudentViewController: UIViewController {
         super.viewDidLoad()
         self.title = "student"
         self.addStudenttable.tableFooterView = UIView()
+        
         setupProperties()
         setButton()
        }
@@ -114,8 +115,9 @@ class AddStudentViewController: UIViewController {
         let phoneNumber = cell3.cellTextfield.text
         let email = cell4.cellTextfield.text
         
-        if fName?.isEmpty ==  true {
+        if fName?.isEmpty ==  true || fName?.isValidName ==  false {
             throwsAlert(title: "First Name can't be empty", message: "fill the first Name Please")
+            
         }
         else if lName?.isEmpty == true {
             throwsAlert(title: "Last Name can't be empty", message: "fil the last name Please")
@@ -147,8 +149,7 @@ extension AddStudentViewController: UITableViewDelegate {
     }
 }
 
-extension AddStudentViewController: UITextFieldDelegate {
-}
+
 
 extension AddStudentViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

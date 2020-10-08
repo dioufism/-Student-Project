@@ -25,26 +25,9 @@ class StudentViewController: UIViewController, SendStudentDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         studentTableView.tableFooterView = UIView()
         self.title = "Students"
-        dataSource = createData()
         
-    }
-    
-    
-    func createData() -> [Student] {
-        
-        var tempData: [Student] = []
-        
-        let student1 = Student(image: #imageLiteral(resourceName: "icons8-user_groups") , firstName: "Ousmane", lastName: "Diouf", email: "dioufism@gmai.com", phoneNumber: "985547558")
-        let student2 = Student(image: #imageLiteral(resourceName: "icons8-user_groups"), firstName: "Dior", lastName: "Diouf", email: "dior@gmai.com", phoneNumber: "985547558")
-        let student3 = Student(image: #imageLiteral(resourceName: "icons8-user_groups"), firstName: "jamicka", lastName: "Diouf", email: "jamicka@gmai.com", phoneNumber: "985547558")
-        let student4 = Student(image: #imageLiteral(resourceName: "icons8-user_groups"), firstName: "sandra", lastName: "Diouf", email: "sandra@gmai.com", phoneNumber: "985547558")
-        
-        tempData.append(student1); tempData.append(student2); tempData.append(student3); tempData.append(student4);
-        
-        return tempData
     }
     
     //MARK: -SegueWay implementation
@@ -69,6 +52,13 @@ extension StudentViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if dataSource.count == 0 {
+            self.studentTableView.setEmptyMessage(" there are currently no Student right Now \n Please add new Students")
+        }
+        else {
+            self.studentTableView.restore()
+        }
+        
         return dataSource.count
     }
 }
@@ -82,7 +72,6 @@ extension StudentViewController: UITableViewDelegate {
         let detailViewController = storyBoard.instantiateViewController(identifier: "toDetailScreen") as StudentDetailViewController
         detailViewController.studentObj = dataSource[indexPath.row]
         detailViewController.studentDetailDelegate = self
-        //fix edit
         detailViewController.detailIndexPath = indexPath
         self.navigationController?.pushViewController(detailViewController, animated: true)
     }

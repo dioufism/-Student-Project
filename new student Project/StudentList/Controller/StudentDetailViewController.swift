@@ -23,7 +23,6 @@ class StudentDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDetail()
-       
     }
     
     func setupDetail() {
@@ -31,9 +30,7 @@ class StudentDetailViewController: UIViewController {
         detailedLabel.text = studentObj!.firstName + " " + studentObj!.lastName
         detailPhoneNumber.text = studentObj?.phoneNumber
         detailedEmail.text = studentObj?.email
-        
     }
-    
     
     @IBAction func editStudent(_ sender: Any) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
