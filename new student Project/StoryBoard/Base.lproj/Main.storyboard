@@ -149,6 +149,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOq-yd-nrm">
+                                <rect key="frame" x="238" y="391" width="53" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hOq-yd-nrm" secondAttribute="height" multiplier="1:1" id="Q0x-V9-GQb"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="icons8-send_mail"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qVk-5k-D2z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -156,16 +163,20 @@
                             <constraint firstItem="qVk-5k-D2z" firstAttribute="trailing" secondItem="rj5-be-oED" secondAttribute="trailing" constant="20" id="0YE-bd-7P8"/>
                             <constraint firstItem="rj5-be-oED" firstAttribute="leading" secondItem="qVk-5k-D2z" secondAttribute="leading" constant="20" id="1o9-1T-FI0"/>
                             <constraint firstItem="c6i-8e-RuE" firstAttribute="top" secondItem="FzY-9o-qBe" secondAttribute="bottom" constant="30.5" id="1yV-aU-1nY"/>
+                            <constraint firstItem="qVk-5k-D2z" firstAttribute="trailing" secondItem="hOq-yd-nrm" secondAttribute="trailing" constant="123" id="3i6-6G-dUP"/>
                             <constraint firstItem="7Wb-9u-kQk" firstAttribute="top" secondItem="c6i-8e-RuE" secondAttribute="bottom" constant="50" id="4Mx-Ky-GhL"/>
                             <constraint firstItem="BeB-xL-W07" firstAttribute="top" secondItem="z7i-GZ-YEa" secondAttribute="bottom" constant="25" id="52a-m9-1oB"/>
                             <constraint firstItem="qVk-5k-D2z" firstAttribute="trailing" secondItem="7Wb-9u-kQk" secondAttribute="trailing" constant="15" id="5XK-UX-NJ2"/>
+                            <constraint firstItem="hOq-yd-nrm" firstAttribute="leading" secondItem="c6i-8e-RuE" secondAttribute="trailing" constant="34" id="Arw-hU-jSZ"/>
                             <constraint firstItem="c6i-8e-RuE" firstAttribute="leading" secondItem="Hl7-uj-XHO" secondAttribute="trailing" constant="32" id="B9h-W5-mA6"/>
+                            <constraint firstItem="7Wb-9u-kQk" firstAttribute="top" secondItem="hOq-yd-nrm" secondAttribute="bottom" constant="38" id="EqR-lT-Hdj"/>
                             <constraint firstItem="k0y-y8-SLe" firstAttribute="top" secondItem="7Wb-9u-kQk" secondAttribute="bottom" constant="25" id="Mwa-0x-Cdq"/>
                             <constraint firstItem="Hl7-uj-XHO" firstAttribute="leading" secondItem="qVk-5k-D2z" secondAttribute="leading" constant="124" id="NCz-jP-3V0"/>
                             <constraint firstItem="FzY-9o-qBe" firstAttribute="leading" secondItem="qVk-5k-D2z" secondAttribute="leading" constant="12" id="NEc-9F-Pry"/>
                             <constraint firstItem="rj5-be-oED" firstAttribute="top" secondItem="qVk-5k-D2z" secondAttribute="top" constant="20" id="Rlb-uo-uGj"/>
                             <constraint firstItem="FzY-9o-qBe" firstAttribute="top" secondItem="rj5-be-oED" secondAttribute="bottom" constant="12" id="U0q-15-o0k"/>
                             <constraint firstItem="z7i-GZ-YEa" firstAttribute="top" secondItem="Hl7-uj-XHO" secondAttribute="bottom" constant="50" id="c1h-ip-1gX"/>
+                            <constraint firstItem="hOq-yd-nrm" firstAttribute="top" secondItem="FzY-9o-qBe" secondAttribute="bottom" constant="30.5" id="kFn-sw-ieh"/>
                             <constraint firstItem="z7i-GZ-YEa" firstAttribute="leading" secondItem="qVk-5k-D2z" secondAttribute="leading" constant="20" id="lgb-fv-eDr"/>
                             <constraint firstItem="BeB-xL-W07" firstAttribute="leading" secondItem="qVk-5k-D2z" secondAttribute="leading" constant="15" id="mlN-AS-gnp"/>
                             <constraint firstItem="k0y-y8-SLe" firstAttribute="leading" secondItem="BeB-xL-W07" secondAttribute="trailing" constant="15" id="nvu-ld-dWD"/>
@@ -340,6 +351,7 @@
     <resources>
         <image name="icons8-call" width="100" height="100"/>
         <image name="icons8-messaging" width="100" height="100"/>
+        <image name="icons8-send_mail" width="100" height="100"/>
         <image name="icons8-user_groups" width="100" height="100"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">

@@ -8,15 +8,15 @@
 import UIKit
 
 class StudentListTableViewCell: UITableViewCell {
-//MARK: -cell Outlets
+    //MARK: -cell Outlets
     @IBOutlet weak var studentImage: UIImageView!
     @IBOutlet weak var studentLabel: UILabel!
     
-//MARK: -cell functions
+    //MARK: -cell functions
     func setCell(student: Student) {
         self.studentImage.image = student.studentImage
         self.studentLabel.text = student.firstName + " " + student.lastName
         
     }
-
+    
 }

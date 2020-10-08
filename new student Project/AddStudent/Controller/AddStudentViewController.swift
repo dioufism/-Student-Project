@@ -7,7 +7,7 @@
 
 import UIKit
 
-//MARK: -Delegate Protocol
+    //MARK: - Delegate Protocol
 protocol SendStudentDelegate: class {
     func addStudent( image: UIImage,firstName: String, lName: String, phoneNumber: String, email: String, indexPath: IndexPath? )
 }
@@ -19,7 +19,6 @@ class AddStudentViewController: UIViewController, UITextFieldDelegate {
         case phoneNumber = "Phone Number"
         case email = "Email"
     }
-    
     //MARK: - OUTLETS
     @IBOutlet weak var addStudenttable: UITableView!
     @IBOutlet weak var studentNavBar: UINavigationBar!
@@ -33,7 +32,7 @@ class AddStudentViewController: UIViewController, UITextFieldDelegate {
     var selectedImage: UIImage? = #imageLiteral(resourceName: "icons8-user_groups")  // always set to have a default image
     var indexAtRow: IndexPath? // pass value to this indexpath
     
-//MARK: - ViewDidLoad()
+    //MARK: - ViewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "student"
@@ -41,8 +40,8 @@ class AddStudentViewController: UIViewController, UITextFieldDelegate {
         
         setupProperties()
         setButton()
-       }
-    //MARK: -HELPER FUNCTION
+    }
+    //MARK: - HELPER FUNCTION
     func setupProperties() { //order of displaying in the tableView
         studentData.append(.firstName)
         studentData.append(.lastName)
@@ -64,7 +63,6 @@ class AddStudentViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setButton() {
-        
         profileImageButton.layer.masksToBounds = true
         profileImageButton.layer.cornerRadius = profileImageButton.bounds.width/8
         profileImageButton.layer.borderWidth = 1
@@ -76,7 +74,7 @@ class AddStudentViewController: UIViewController, UITextFieldDelegate {
         alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alertController, animated: true)
     }
-    //MARK: -Action Buttons
+    //MARK: - Action Buttons
     @IBAction func ProfileImageButtontapped(_ sender: UIButton) {
         let actionSheet: UIAlertController = UIAlertController(title: "set picture", message: nil, preferredStyle: UIAlertController.Style.actionSheet)
         let camera = UIAlertAction(title: "Camera", style: .default) { [self] (action) in
@@ -101,9 +99,7 @@ class AddStudentViewController: UIViewController, UITextFieldDelegate {
         actionSheet.addAction(actionPhotoLibrary)
         actionSheet.addAction(canelation)
         self.present(actionSheet, animated: true, completion: nil)
-
     }
-    
     @IBAction func saveInfo(_ sender: Any) {
         let cell1 = addStudenttable.cellForRow(at: IndexPath(row: 0, section: 0)) as! AddStudentTableViewCell
         let cell2 = addStudenttable.cellForRow(at: IndexPath(row: 1, section: 0)) as! AddStudentTableViewCell
@@ -114,10 +110,8 @@ class AddStudentViewController: UIViewController, UITextFieldDelegate {
         let lName = cell2.cellTextfield.text
         let phoneNumber = cell3.cellTextfield.text
         let email = cell4.cellTextfield.text
-        
         if fName?.isEmpty ==  true || fName?.isValidName ==  false {
             throwsAlert(title: "First Name can't be empty", message: "fill the first Name Please")
-            
         }
         else if lName?.isEmpty == true {
             throwsAlert(title: "Last Name can't be empty", message: "fil the last name Please")
@@ -136,35 +130,26 @@ class AddStudentViewController: UIViewController, UITextFieldDelegate {
             studentDelegate?.addStudent(image: selectedImage! ,firstName: fName!, lName: lName!, phoneNumber: phoneNumber!, email: email!, indexPath: indexAtRow)
             self.navigationController?.popViewController(animated: true)
         }
-        
     }
-    
 }
 
-//MARK: -DataSource&Delegate
+    //MARK: -DataSource&Delegate
 extension AddStudentViewController: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
     }
 }
-
-
-
 extension AddStudentViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let studentAtRow = studentData[indexPath.row] // we at row 0  var studentAtRow = ""
         var text = " "
         guard let cell =  tableView.dequeueReusableCell(withIdentifier: "AddStudentTableViewCell") as? AddStudentTableViewCell
         else {fatalError("cant dequeue add student cell")}
-    
         cell.cellTextfield.keyboardType = .default
         switch studentAtRow {
         case .firstName:
             text = student?.firstName ?? ""
             cell.cellTextfield.autocapitalizationType = .words
-            // studentAtRow =
         case .lastName:
             text = student?.lastName ?? ""
             cell.cellTextfield.autocapitalizationType = .words
@@ -174,23 +159,20 @@ extension AddStudentViewController: UITableViewDataSource {
         case .email:
             text = student?.email ?? ""
         }
-        
         cell.setupUI(label: studentAtRow.rawValue, text: text)
         return cell
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         studentData.count
     }
 }
-
+//MARK: - Extensions
 extension AddStudentViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate  { //need navigation controller because there is a controller that we going to have to present
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         //get the image that the user has chosen
         if let capturedImage = info[.editedImage] as?  UIImage {
             selectedImage =  capturedImage
-          profileImageButton.setImage(capturedImage, for: .normal)
+            profileImageButton.setImage(capturedImage, for: .normal)
         }
         picker.dismiss(animated: true, completion: nil)
     }

@@ -8,6 +8,7 @@
 import UIKit
 
 class StudentViewController: UIViewController, SendStudentDelegate {
+    //MARK: - Implementation of Protocol
     func addStudent(image: UIImage, firstName: String, lName: String, phoneNumber: String, email: String, indexPath: IndexPath?) {
         let newstudent = Student(image: image, firstName: firstName, lastName: lName, email: email, phoneNumber: phoneNumber)
         if let index = indexPath {
@@ -18,20 +19,17 @@ class StudentViewController: UIViewController, SendStudentDelegate {
         }
         studentTableView.reloadData()
     }
-    
+    //MARK: - Outlets
     @IBOutlet weak var studentTableView: UITableView!
-    
+    //MARK: - Class Variable
     var dataSource: [Student] = []
-    
+    //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         studentTableView.tableFooterView = UIView()
         self.title = "Students"
-        
     }
-    
     //MARK: -SegueWay implementation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddStudent" {
             let destinationVc = segue.destination as! AddStudentViewController
@@ -39,10 +37,8 @@ class StudentViewController: UIViewController, SendStudentDelegate {
         }
     }
 }
-
-
+//MARK: - Extentions
 extension StudentViewController: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let studentAtRow = dataSource[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "StudentListTableViewCell") as?  StudentListTableViewCell
@@ -58,16 +54,12 @@ extension StudentViewController: UITableViewDataSource {
         else {
             self.studentTableView.restore()
         }
-        
         return dataSource.count
     }
 }
-
 extension StudentViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         tableView.deselectRow(at: indexPath, animated: true)
-        
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let detailViewController = storyBoard.instantiateViewController(identifier: "toDetailScreen") as StudentDetailViewController
         detailViewController.studentObj = dataSource[indexPath.row]
