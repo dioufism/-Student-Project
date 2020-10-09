@@ -23,12 +23,35 @@ class StudentViewController: UIViewController, SendStudentDelegate {
     @IBOutlet weak var studentTableView: UITableView!
     //MARK: - Class Variable
     var dataSource: [Student] = []
+    var studentDataDictionary = [String: [Student]]() {
+        didSet {
+            self.studentTableView.reloadData()
+        }
+    }
+    var studentSectionTitle = [String]() {
+        didSet {
+            self.studentTableView.reloadData()
+        }
+    }
+    
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         studentTableView.tableFooterView = UIView()
         self.title = "Students"
+        for student in dataSource {
+            let studentKey = String(student.firstName.prefix(1))
+            if var studentValues = studentDataDictionary[studentKey] {
+                studentValues.append(student)
+                studentDataDictionary[studentKey] = studentValues }
+                else  {
+                    self.studentDataDictionary[studentKey] = [student]
+                }
+        }
+        studentSectionTitle = [String](studentDataDictionary.keys)
+        studentSectionTitle = studentSectionTitle.sorted(by: {$0 < $1 })
     }
+    
     //MARK: -SegueWay implementation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddStudent" {
