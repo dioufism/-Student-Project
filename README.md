@@ -1,4 +1,16 @@
 # -Student-Project
+An iOS app that let user add a student contact, edit the contacts and call, message, email them from the app
+
+## APP Features
+- Add student contact to list, sectioned by the first letter in student first name
+- Edit student profiles (first name, last name, phone number, email, profile image)
+- Set profile image using camera or photo library
+
+## Utilizes
+- Delegate
+- UITableView
+- MessageUI
+- UIImagePickerControllerDelegate
 
 ## Demo
 
