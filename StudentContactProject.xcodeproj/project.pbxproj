@@ -27,7 +27,7 @@
 		DA15E7A8251FB85A00AE24B2 /* AddStudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentTableViewCell.swift; sourceTree = "<group>"; };
 		DA15E7AD25203F2500AE24B2 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		DA45C230252F75890010B3EE /* tableviewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableviewExtention.swift; sourceTree = "<group>"; };
-		DAA8DB9E251F82E00052AF85 /* student Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "student Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAA8DB9E251F82E00052AF85 /* StudentContactProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentContactProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA8DBA1251F82E00052AF85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAA8DBA3251F82E00052AF85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DAA8DBA8251F82E00052AF85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		DAA8DB95251F82E00052AF85 = {
 			isa = PBXGroup;
 			children = (
-				DAA8DBA0251F82E00052AF85 /* new student Project */,
+				DAA8DBA0251F82E00052AF85 /* StudentContactProject */,
 				DAA8DB9F251F82E00052AF85 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,12 +71,12 @@
 		DAA8DB9F251F82E00052AF85 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DAA8DB9E251F82E00052AF85 /* student Project.app */,
+				DAA8DB9E251F82E00052AF85 /* StudentContactProject.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DAA8DBA0251F82E00052AF85 /* new student Project */ = {
+		DAA8DBA0251F82E00052AF85 /* StudentContactProject */ = {
 			isa = PBXGroup;
 			children = (
 				DAD5B7E72521AD9600C4CE62 /* Helper */,
@@ -86,7 +86,7 @@
 				DAA8DBAA251F82E30052AF85 /* Assets.xcassets */,
 				DAA8DBAF251F82E30052AF85 /* Info.plist */,
 			);
-			path = "new student Project";
+			path = StudentContactProject;
 			sourceTree = "<group>";
 		};
 		DAD5B7E02521ACDD00C4CE62 /* View */ = {
@@ -127,8 +127,8 @@
 		DAD5B7E42521AD3200C4CE62 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DAA8DBBD251F87300052AF85 /* StudentModel.swift */,
 				DA15E7AD25203F2500AE24B2 /* Validation.swift */,
+				DAA8DBBD251F87300052AF85 /* StudentModel.swift */,
 				DA45C230252F75890010B3EE /* tableviewExtention.swift */,
 			);
 			path = Model;
@@ -163,9 +163,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DAA8DB9D251F82E00052AF85 /* student Project */ = {
+		DAA8DB9D251F82E00052AF85 /* StudentContactProject */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DAA8DBB2251F82E30052AF85 /* Build configuration list for PBXNativeTarget "student Project" */;
+			buildConfigurationList = DAA8DBB2251F82E30052AF85 /* Build configuration list for PBXNativeTarget "StudentContactProject" */;
 			buildPhases = (
 				DAA8DB9A251F82E00052AF85 /* Sources */,
 				DAA8DB9B251F82E00052AF85 /* Frameworks */,
@@ -175,9 +175,9 @@
 			);
 			dependencies = (
 			);
-			name = "student Project";
+			name = StudentContactProject;
 			productName = "new student Project";
-			productReference = DAA8DB9E251F82E00052AF85 /* student Project.app */;
+			productReference = DAA8DB9E251F82E00052AF85 /* StudentContactProject.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -194,7 +194,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DAA8DB99251F82E00052AF85 /* Build configuration list for PBXProject "student Project" */;
+			buildConfigurationList = DAA8DB99251F82E00052AF85 /* Build configuration list for PBXProject "StudentContactProject" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -207,7 +207,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DAA8DB9D251F82E00052AF85 /* student Project */,
+				DAA8DB9D251F82E00052AF85 /* StudentContactProject */,
 			);
 		};
 /* End PBXProject section */
@@ -388,12 +388,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZX884X8HC;
-				INFOPLIST_FILE = "new student Project/Info.plist";
+				INFOPLIST_FILE = StudentContactProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.exadata.new-student-Project";
+				PRODUCT_BUNDLE_IDENTIFIER = com.exadata.StudentContactProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -407,12 +407,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZX884X8HC;
-				INFOPLIST_FILE = "new student Project/Info.plist";
+				INFOPLIST_FILE = StudentContactProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.exadata.new-student-Project";
+				PRODUCT_BUNDLE_IDENTIFIER = com.exadata.StudentContactProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -422,7 +422,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DAA8DB99251F82E00052AF85 /* Build configuration list for PBXProject "student Project" */ = {
+		DAA8DB99251F82E00052AF85 /* Build configuration list for PBXProject "StudentContactProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAA8DBB0251F82E30052AF85 /* Debug */,
@@ -431,7 +431,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DAA8DBB2251F82E30052AF85 /* Build configuration list for PBXNativeTarget "student Project" */ = {
+		DAA8DBB2251F82E30052AF85 /* Build configuration list for PBXNativeTarget "StudentContactProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAA8DBB3251F82E30052AF85 /* Debug */,
