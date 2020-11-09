@@ -1,4 +1,4 @@
-# -Student-Project
+# -New-Student-Project
 An iOS app that let user add a student contact, edit the contacts and call, message, email them from the app
 
 ## APP Features
